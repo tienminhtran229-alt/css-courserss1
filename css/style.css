@@ -1,0 +1,151 @@
+/* ==========================================
+   1. KIỂU DÁNG CƠ BẢN & LIÊN KẾT BỎ QUA
+   ========================================== */
+
+/* Nền xám nhạt, chữ màu xám đen đậm để đạt chuẩn tương phản WAVE Accessibility */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f8;
+    color: #1a1a1a;
+}
+
+/* Liên kết nhảy tới nội dung chính */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #111111;
+    color: #ffffff;
+    padding: 10px 15px;
+    z-index: 1000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Nhận xét / vô hiệu hóa kiểu dáng hiện có cho phần tử li theo yêu cầu */
+/*
+li {
+    display: inline;
+    margin-right: 12px;
+}
+*/
+
+/* ==========================================
+   2. ĐIỀU HƯỚNG (NAV)
+   ========================================== */
+
+/* nav hiển thị khối nội tuyến (inline-block) và width 80% */
+nav {
+    display: inline-block;
+    width: 80%;
+    background-color: #2b3a4a; /* Tông màu xanh đen sang trọng */
+    padding: 12px 10%;
+    box-sizing: border-box;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Bộ chọn hậu duệ: Chỉ chỉnh ảnh logo trong nav có độ rộng 10% */
+nav img {
+    width: 10%;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+/* ==========================================
+   3. BỐ CỤC GRID
+   ========================================== */
+
+/* Lớp grid 2 cột (mỗi cột ~40%), tinh chỉnh justify-content, align-items, row-gap */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    justify-content: space-evenly;
+    align-items: stretch;
+    row-gap: 25px;
+    margin: 25px 0;
+}
+
+/* Bộ chọn hậu duệ: Chỉ tạo kiểu cho hình ảnh TRONG lớp grid có chiều rộng 100% */
+.grid img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+}
+
+.grid-item {
+    background: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    padding: 18px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.grid-item h3 {
+    color: #0d47a1; /* Màu xanh đậm đạt tương phản trên nền trắng */
+    margin-top: 12px;
+}
+
+/* ==========================================
+   4. BỐ CỤC FLEXBOX
+   ========================================== */
+
+/* Lớp flex sử dụng flexbox, tinh chỉnh flex-wrap và justify-content */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e3f2fd;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 8px;
+}
+
+.flex-item {
+    background-color: #0d47a1; /* Màu xanh navy tương phản tốt với chữ trắng */
+    color: #ffffff;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 250px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.flex-item h3 {
+    margin-top: 0;
+    color: #ffffff;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #2b3a4a;
+    color: #ffffff;
+    margin-top: 30px;
+}
